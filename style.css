@@ -127,3 +127,46 @@ footer{padding:32px 0; color:var(--muted)}
 /* Acessibilidade */
 :focus-visible{outline:2px solid var(--brand); outline-offset:2px; border-radius:12px}
 .sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0}
+/* Cabeçalho adicional no topo */
+.top-bar {
+  background: linear-gradient(90deg, var(--brand), var(--brand-2));
+  color: #0b1220;
+  padding: 10px 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,.2);
+}
+
+.top-bar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.site-title {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.site-slogan {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Reduzindo imagens dos cards */
+.card img {
+  height: 140px; /* antes era 180px */
+  object-fit: cover;
+}

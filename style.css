@@ -1,146 +1,136 @@
-:root {
-    --cor-do-header: #388fa5; 
-    --cor-do-site: #46ffffbe;
-    --cor-secoes: #230fd8;
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0px;
-    padding: 0px;
-    background-color: var(--cor-do-site);
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
 }
 
-header {
-    background-color: var(--cor-do-header);
-    padding: 5px;
+/* Cabeçalho */
+.topo {
+  background: linear-gradient(90deg, #0077b6, #00b4d8);
+  color: #fff;
+  padding: 15px 0;
 }
 
-header div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    flex-direction: row;
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
 }
 
-footer {
-    background-color: var(--cor-do-header);
-    text-align: center;
-    padding: 1rem 0;
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-footer p {
-    margin-bottom: 0px;
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.nome-do-site {
-    font-size: 3rem;
-    font-weight: 300;
-    text-align: center;
+.logo img {
+  width: 40px;
+  height: 40px;
 }
 
-.link-list {
-    width: 75%;
-    display: flex;
-    font-size: 26px;
-    margin: 0 auto;
-    padding: 10px 0;
-    align-items: center;
-    justify-content: center;
+.logo h1 {
+  font-size: 1.5rem;
 }
 
-.link-list a {
-    text-decoration: none;
-    color: black;
-    margin: 0 3rem;
-
-}
-
-.receitas h2{
-    font-size: 32px;
-    font-weight: 300;
-    margin-left: 15px;
-}
-
-.doces {
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    text-align: center;
-    margin: 0px;
-}
-
-.nome-doce {
-    font-size: 28px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-}
-
-
-.nome-doce a {
-    text-decoration: none;
-    color: black;
-}
-
-.sobre-nos {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--cor-secoes);
-    border: 1px solid black;
-    border-radius: 8px;
-    width: 50%;
-    padding: 2rem;
-    margin: 20px auto;
-}
-
-.sobre-nos h2 {
-    margin-top: 10px;
-    font-family: "Julius Sans One", sans-serif;
-    font-weight: 500;
-    font-size: 32px;
-}
-
-.descricao p {
-    margin-left: 20px;
-    font-size: 16px;
-    font-family: "Montserrat", sans-serif;
-}
-.doces {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    justify-items: center;
-}
-
-.doces img {
-    width: 200px;      /* largura fixa */
-    height: 200px;     /* altura fixa */
-    object-fit: cover; /* mantém proporção cortando se necessário */
-    border-radius: 12px;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease;
-}
-
-.doces img:hover {
-    transform: scale(1.05);
-}
-
-.nome-doce {
-    text-align: center;
-    margin-top: 8px;
-}
-
-.doces img {
-  cursor: pointer;
-}
-
-.doces a {
-  display: block;
+.menu a {
+  color: #fff;
   text-decoration: none;
-  border-radius: 12px; /* acompanha o raio da imagem */
-  outline: none;
+  margin-left: 20px;
+  font-weight: bold;
 }
 
-.doces a:focus-visible img {
-  outline: 3px solid #000; /* foco visível no teclado */
-  outline-offset: 2px;
+.menu a:hover {
+  text-decoration: underline;
+}
+
+/* Sessão Hero */
+.hero {
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600') no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background: #00b4d8;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #0096c7;
+}
+
+/* Destinos */
+.destinos h2 {
+  text-align: center;
+  margin: 40px 0 20px;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: #f8f9fa;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-width: 300px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 15px 0 10px;
+  color: #0077b6;
+}
+
+.card p {
+  padding: 0 15px 20px;
+  color: #555;
+}
+
+/* Rodapé */
+.rodape {
+  background: #023e8a;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
 }

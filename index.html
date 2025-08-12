@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sua Agência de Viagens</title>
+  <meta name="description" content="Descubra destinos incríveis com uma agência que cuida de tudo por você." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#inicio" aria-label="Início">
+        <span class="logo" aria-hidden="true"></span>
+        <strong>Atlas Viagens</strong>
+      </a>
+      <nav class="menu" aria-label="Principal">
+        <a href="#destinos">Destinos</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#contato">Contato</a>
+        <a class="cta" href="#reserva">Solicitar orçamento</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="pill">✈️ descontraído, sem perder a formalidade</span>
+          <h1>Planejamos sua viagem com cuidado e um toque leve.</h1>
+          <p>Pacotes sob medida, suporte próximo e as melhores condições para você conhecer o mundo com tranquilidade.</p>
+          <div class="search-card" aria-labelledby="buscar">
+            <h2 id="buscar" class="sr-only">Buscar ofertas</h2>
+            <form class="search" action="#" method="get">
+              <div class="field">
+                <label for="destino">Destino</label>
+                <input id="destino" name="destino" placeholder="Ex.: Lisboa, Cancun, Maceió" required>
+              </div>
+              <div class="field">
+                <label for="datas">Datas</label>
+                <input id="datas" name="datas" type="text" placeholder="Ida 10/09 · Volta 18/09">
+              </div>
+              <div class="field">
+                <label for="pessoas">Pessoas</label>
+                <select id="pessoas" name="pessoas">
+                  <option>1 adulto</option>
+                  <option>2 adultos</option>
+                  <option>3 adultos</option>
+                  <option>Família</option>
+                  <option>Grupo</option>
+                </select>
+              </div>
+              <button class="btn btn-primary" type="submit">Buscar</button>
+            </form>
+          </div>
+        </div>
+        <div>
+          <div class="card" aria-hidden="true">
+            <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=1400&auto=format&fit=crop" alt="Vista aérea de uma praia paradisíaca"/>
+            <div class="content">
+              <span class="tag">ofertas da semana</span>
+              <h3>Caribe All Inclusive</h3>
+              <p class="muted">7 noites • aéreo + hotel • transfer</p>
+            </div>
+            <div class="price">
+              <small class="muted">a partir de</small>
+              <strong>R$ 3.990</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESTINOS EM DESTAQUE -->
+    <section id="destinos" class="section">
+      <div class="container">
+        <h2>Destinos em destaque</h2>
+        <p class="muted">Selecionados por nossa equipe para combinar conforto, experiências e ótimo custo–benefício.</p>
+        <div class="grid grid-3" style="margin-top:12px">
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1508057198894-247b23fe5ade?q=80&w=1400&auto=format&fit=crop" alt="Paris ao pôr do sol"/>
+            <div class="content">
+              <span class="tag">Europa</span>
+              <h3>Paris & Alpes</h3>
+              <p class="muted">Roteiro romântico com escapada aos Alpes.</p>
+            </div>
+            <div class="price"><small class="muted">a partir de</small><strong>R$ 6.490</strong></div>
+          </article>
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1429087969512-1e85aab2683d?q=80&w=1400&auto=format&fit=crop" alt="Rio de Janeiro, Pão de Açúcar"/>
+            <div class="content">
+              <span class="tag">Brasil</span>
+              <h3>Rio & Serra</h3>
+              <p class="muted">Cidade maravilhosa + retiro na serra.</p>
+            </div>
+            <div class="price"><small class="muted">a partir de</small><strong>R$ 1.990</strong></div>
+          </article>
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1494475673543-6a6a27143b18?q=80&w=1400&auto=format&fit=crop" alt="Templos em Bali"/>
+            <div class="content">
+              <span class="tag">Ásia</span>
+              <h3>Bali Essencial</h3>
+              <p class="muted">Bem-estar, natureza e cultura balinesa.</p>
+            </div>
+            <div class="price"><small class="muted">a partir de</small><strong>R$ 4.490</strong></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section id="servicos" class="section">
+      <div class="container">
+        <h2>Por que viajar com a gente</h2>
+        <div class="services" style="margin-top:12px">
+          <div class="service">
+            <div class="ico">🗺️</div>
+            <h4>Roteiros sob medida</h4>
+            <p class="muted">Montamos o plano ideal para seu estilo, tempo e orçamento.</p>
+          </div>
+          <div class="service">
+            <div class="ico">🤝</div>
+            <h4>Atendimento dedicado</h4>
+            <p class="muted">Do primeiro contato ao pós-viagem, você não fica sozinho.</p>
+          </div>
+          <div class="service">
+            <div class="ico">💳</div>
+            <h4>Condições flexíveis</h4>
+            <p class="muted">Parcelamento e opções que tornam sua viagem possível.</p>
+          </div>
+          <div class="service">
+            <div class="ico">🛡️</div>
+            <h4>Segurança e confiança</h4>
+            <p class="muted">Parcerias selecionadas e suporte 24h para imprevistos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section id="depoimentos" class="section">
+      <div class="container">
+        <h2>O que nossos clientes dizem</h2>
+        <div class="testis" style="margin-top:12px">
+          <figure class="quote">
+            <blockquote>“Tudo impecável. Recebi dicas ótimas e a viagem saiu até mais barata do que eu esperava.”</blockquote>
+            <figcaption><small>— Paula, SP</small></figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote>“Suporte rápido no aeroporto quando o voo atrasou. Resolveram tudo.”</blockquote>
+            <figcaption><small>— Marcelo, PR</small></figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote>“Fechamos lua de mel com eles. Experiência inesquecível e sem dor de cabeça.”</blockquote>
+            <figcaption><small>— Júlia & Renan, MG</small></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA / CONTATO -->
+    <section id="reserva" class="section">
+      <div class="container cta-wrap">
+        <div style="display:grid; grid-template-columns:1.2fr .8fr; gap:16px; align-items:center">
+          <div>
+            <h2>Pronto para começar?</h2>
+            <p class="muted">Conte, em poucas linhas, como imagina sua viagem ideal. Nós respondemos com um esboço de roteiro e valores.</p>
+          </div>
+          <form action="#" method="post" class="search" style="grid-template-columns:1fr .6fr; gap:10px">
+            <input name="email" type="email" placeholder="Seu e-mail" required aria-label="Seu e-mail">
+            <button class="btn btn-primary" type="submit">Quero um orçamento</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contato" class="container">
+    <div class="foot">
+      <div>
+        <h5>Atlas Viagens</h5>
+        <p>Atendimento de segunda a sexta, 9h–18h (BRT).<br/>CNPJ 00.000.000/0001-00</p>
+      </div>
+      <div>
+        <h5>Contato</h5>
+        <p><a href="mailto:contato@atlasviagens.com.br">contato@atlasviagens.com.br</a><br>WhatsApp: (00) 00000-0000</p>
+      </div>
+      <div>
+        <h5>Links</h5>
+        <p><a href="#servicos">Serviços</a><br><a href="#destinos">Destinos</a><br><a href="#depoimentos">Depoimentos</a></p>
+      </div>
+    </div>
+    <div class="copyright">© <span id="ano"></span> Atlas Viagens — Todos os direitos reservados.</div>
+  </footer>
+
+  <script>
+    document.getElementById('ano').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -170,6 +170,6 @@ body{
 
 /* ===== Responsivo ===== */
 @media (max-width:520px){
-  .nav{ gap: 12px; }
+  .nav{ gap: 12px; } 
   .menu{ gap: 14px; }
 }

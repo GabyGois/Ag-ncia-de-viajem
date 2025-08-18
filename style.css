@@ -30,6 +30,11 @@ body {
   justify-content: space-between;
 }
 
+.LOGO img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
 
 .menu a {
   color: #ad5252;

@@ -1,72 +1,58 @@
 /* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root{
-  --blue-1:#0066ff;         /* azul vibrante */
-  --blue-2:#0096ff;
-  --blue-deep:#023e8a;
-  --text:#333;
-  --muted:#555;
-  --card:#f8f9fa;
-  --white:#fff;
+  --blue: #0066ff;          /* azul vibrante */
+  --blue-2: #0096ff;
+  --deep: #023e8a;
+  --text: #333;
+  --muted: #555;
+  --white: #fff;
+  --card: #f8f9fa;
 }
+
+html { scroll-behavior: smooth; }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--text);
   line-height: 1.6;
-  background: #ffffff;
+  background: #fff;
 }
 
-.container {
-  width: 92%;
-  max-width: 1100px;
-  margin: 0 auto;
-}
+.container { width: 92%; max-width: 1100px; margin: 0 auto; }
 
-/* =================== Cabeçalho =================== */
-.topo {
-  background: linear-gradient(90deg, var(--blue-1), var(--blue-2));
+/* ====== Cabeçalho ====== */
+.topo{
+  background: linear-gradient(90deg, var(--blue), var(--blue-2));
   color: var(--white);
-  padding: 18px 0 10px;
-  position: sticky;
-  top: 0;
-  z-index: 50;
+  padding: 16px 0 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,.12);
+  position: sticky; top: 0; z-index: 100;
 }
 
-/* Linha 1: logo esquerda + título centralizado usando grid */
-.header-brand{
-  display: grid;
-  grid-template-columns: 64px 1fr 64px; /* espaço à direita para equilibrar o título central */
+/* Linha 1: logo à esquerda + título centralizado */
+.brand{
+  position: relative;
+  min-height: 56px;
+  display: flex;
   align-items: center;
-  column-gap: 12px;
 }
 
 .logo{
-  width: 48px;       /* logo pequena */
-  height: 48px;
-  object-fit: contain;
-  display: block;
-  filter: drop-shadow(0 1px 1px rgba(0,0,0,.2));
+  width: 44px; height: 44px; object-fit: contain;
 }
 
-.brand-left{ display: inline-block; }
-.brand-right{ display: inline-block; } /* placeholder para centralizar o título */
-
 .site-title{
-  text-align: center;
+  position: absolute;
+  left: 50%; transform: translateX(-50%);
   font-size: clamp(22px, 3.6vw, 34px);
-  letter-spacing: .5px;
   font-weight: 800;
+  letter-spacing: .5px;
   text-shadow: 0 1px 2px rgba(0,0,0,.25);
 }
 
-/* Linha 2: menu centralizado */
+/* Linha 2: menu centralizado abaixo do título */
 .menu{
   display: flex;
   justify-content: center;
@@ -77,7 +63,7 @@ body {
 
 .menu a{
   color: var(--white);
-  text-decoration: none;
+  text-decoration: none;        /* corrigido */
   font-weight: 700;
   letter-spacing: .2px;
   padding: 8px 4px;
@@ -86,108 +72,45 @@ body {
 }
 
 .menu a:hover{
-  border-color: rgba(255,255,255,.9);
+  border-color: rgba(255,255,255,.95);
   transform: translateY(-1px);
 }
 
-/* =================== Hero =================== */
-.hero {
-  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600') no-repeat center/cover;
+/* ====== Hero ====== */
+.hero{
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600')
+              no-repeat center/cover;
   color: var(--white);
   text-align: center;
   padding: clamp(60px, 10vw, 120px) 20px;
 }
-
-.hero h2 {
-  font-size: clamp(26px, 4.5vw, 44px);
-  margin-bottom: 10px;
-  text-shadow: 0 2px 8px rgba(0,0,0,.35);
-}
-
-.hero p {
-  font-size: clamp(16px, 2.4vw, 20px);
-  margin-bottom: 20px;
-  text-shadow: 0 1px 6px rgba(0,0,0,.35);
-}
-
-.btn {
-  display: inline-block;
-  background: var(--blue-1);
-  color: var(--white);
-  padding: 12px 22px;
-  border-radius: 28px;
-  text-decoration: none;
-  font-weight: bold;
+.hero h2{ font-size: clamp(26px, 4.5vw, 44px); margin-bottom: 10px; text-shadow: 0 2px 8px rgba(0,0,0,.35); }
+.hero p{ font-size: clamp(16px, 2.4vw, 20px); margin-bottom: 20px; text-shadow: 0 1px 6px rgba(0,0,0,.35); }
+.btn{
+  display: inline-block; background: var(--blue); color: var(--white);
+  padding: 12px 22px; border-radius: 28px; text-decoration: none; font-weight: bold;
   transition: transform .15s ease, filter .15s ease, background .15s ease;
 }
+.btn:hover{ background: var(--blue-2); transform: translateY(-2px); filter: brightness(1.03); }
 
-.btn:hover {
-  background: var(--blue-2);
-  transform: translateY(-2px);
-  filter: brightness(1.03);
-}
-
-/* =================== Destinos =================== */
-.destinos h2 {
-  text-align: center;
-  margin: 40px 0 20px;
-  color: var(--blue-deep);
-}
-
-.cards {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.card {
-  background: var(--card);
-  border-radius: 12px;
-  overflow: hidden;
+/* ====== Destinos ====== */
+.destinos h2{ text-align: center; margin: 40px 0 20px; color: var(--deep); }
+.cards{ display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
+.card{
+  background: var(--card); border-radius: 12px; overflow: hidden;
   box-shadow: 0 6px 14px rgba(0,0,0,0.09);
-  max-width: 310px;
-  text-align: center;
+  max-width: 310px; text-align: center;
   transition: transform .15s ease, box-shadow .15s ease;
 }
+.card:hover{ transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.12); }
+.card img{ width: 100%; height: 180px; object-fit: cover; display: block; }
+.card h3{ margin: 16px 0 10px; color: var(--blue); font-size: 20px; }
+.card p{ padding: 0 16px 20px; color: var(--muted); font-size: 15px; }
 
-.card:hover{
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
-}
+/* ====== Rodapé ====== */
+.rodape{ background: var(--deep); color: var(--white); text-align: center; padding: 16px; margin-top: 44px; font-size: 14px; }
 
-.card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  display: block;
-}
-
-.card h3 {
-  margin: 16px 0 10px;
-  color: var(--blue-1);
-  font-size: 20px;
-}
-
-.card p {
-  padding: 0 16px 20px;
-  color: var(--muted);
-  font-size: 15px;
-}
-
-/* =================== Rodapé =================== */
-.rodape {
-  background: var(--blue-deep);
-  color: var(--white);
-  text-align: center;
-  padding: 16px;
-  margin-top: 44px;
-  font-size: 14px;
-}
-
-/* =================== Pequenas correções responsivas =================== */
+/* Responsivo */
 @media (max-width: 480px){
-  .header-brand{ grid-template-columns: 48px 1fr 48px; }
-  .logo{ width: 40px; height: 40px; }
-  .menu{ gap: 14px; }
+  .logo{ width: 38px; height: 38px; }
 }

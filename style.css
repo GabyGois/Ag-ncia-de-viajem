@@ -1,0 +1,175 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+:root{
+  --blue:#1e63ff;        /* azul do menu e botões */
+  --blue-2:#0a49d1;      /* azul escuro para hover */
+  --pink:#ff4fb8;        /* rosa destaque */
+  --text:#2b2b2b;
+  --muted:#646464;
+  --bg:#ffffff;
+  --card:#f7f8ff;
+  --white:#fff;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+.container{ width: 92%; max-width: 1080px; margin: 0 auto; }
+
+/* ===== Menu / Topo ===== */
+.topo{
+  background: var(--blue);
+  color: var(--white);
+  position: sticky; top: 0; z-index: 100;
+  box-shadow: 0 4px 10px rgba(0,0,0,.12);
+}
+
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 60px;
+}
+
+/* Logo pequena (troque por <img …> se quiser) */
+.logo{
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--pink), #ff86d0);
+  color: var(--white);
+  display: grid;
+  place-items: center;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .5px;
+}
+
+/* Menu */
+.menu{
+  display: flex;
+  gap: clamp(14px, 4vw, 36px);
+  flex-wrap: wrap;
+}
+.menu a{
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 10px 4px;
+  border-bottom: 2px solid transparent;
+  transition: .2s ease;
+}
+.menu a:hover{
+  border-color: var(--pink);
+  transform: translateY(-1px);
+}
+
+/* ===== Hero ===== */
+.hero{
+  text-align: center;
+  padding: clamp(48px, 10vw, 110px) 0;
+}
+.hero h1{
+  font-size: clamp(28px, 5vw, 46px);
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.hero p{
+  font-size: clamp(15px, 2.4vw, 18px);
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+.btn{
+  display: inline-block;
+  background: var(--pink);
+  color: var(--white);
+  padding: 12px 22px;
+  border-radius: 28px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: .2s ease;
+}
+.btn:hover{ filter: brightness(1.05); transform: translateY(-2px); }
+
+/* ===== Lugares (cards) ===== */
+.lugares h2{
+  text-align: center;
+  color: var(--blue-2);
+  margin: 34px 0 18px;
+}
+
+.grid-cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px,1fr));
+  gap: 18px;
+}
+
+/* Cada card é um link clicável */
+.card{
+  display: block;
+  background: var(--card);
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition: .18s ease;
+}
+.card:hover{
+  border-color: var(--pink);
+  transform: translateY(-3px);
+}
+
+/* Espaço da imagem (substitua por <img src="..." alt="..."> se preferir) */
+.thumb{
+  height: 150px;
+  background:
+    linear-gradient(135deg, #e9ecff, #ffd3ec);
+  display: block;
+}
+
+/* Título do card */
+.card h3{
+  padding: 10px 12px 14px;
+  color: var(--blue);
+  font-size: 18px;
+}
+
+/* ===== Sobre nós ===== */
+.sobre{
+  background: linear-gradient(0deg, #ffe1f2, #ffffff);
+  margin-top: 40px;
+  padding: 36px 0 42px;
+}
+.sobre h2{
+  text-align: center;
+  color: var(--pink);
+  margin-bottom: 10px;
+}
+.sobre p{
+  max-width: 760px;
+  margin: 0 auto;
+  color: var(--muted);
+  text-align: center;
+  padding: 0 10px;
+}
+
+/* ===== Rodapé ===== */
+.rodape{
+  background: var(--blue-2);
+  color: var(--white);
+  text-align: center;
+  padding: 14px 0;
+  margin-top: 24px;
+}
+
+/* ===== Responsivo ===== */
+@media (max-width:520px){
+  .nav{ gap: 12px; }
+  .menu{ gap: 14px; }
+}

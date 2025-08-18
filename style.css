@@ -14,8 +14,8 @@ body {
 /* Cabeçalho */
 .topo {
   background: linear-gradient(90deg, #0077b6, #00b4d8);
-  color: #fff;
-  padding: 15px 0;
+  color: #ce1313;
+  padding: 15px 3;
 }
 
 .container {
@@ -30,24 +30,10 @@ body {
   justify-content: space-between;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo img {
-  width: 40px;
-  height: 40px;
-}
-
-.logo h1 {
-  font-size: 1.5rem;
-}
 
 .menu a {
-  color: #fff;
-  text-decoration: none;
+  color: #ad5252;
+  text-decoration: saddlebrown;
   margin-left: 20px;
   font-weight: bold;
 }
